@@ -10,3 +10,14 @@ def sales_reports(log_file):  #This declares the function and accepts a paramete
 
 
 sales_reports(log_file)   #This tells the computer to run the function and calls log_file as the parameter. 
+
+
+def more_than_10(log_file):
+    for line in log_file:
+        line = line.rstrip()
+        line_array=line.split(' ')
+        quantity = int(line_array[2])
+        if quantity > 10:
+            print(line)
+
+more_than_10(log_file)
